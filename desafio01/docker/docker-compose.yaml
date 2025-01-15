@@ -1,0 +1,16 @@
+services:
+  api:
+    container_name: api
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../src:/home/app/api/src
+    restart: always
+    command: |
+      /bin/sh -c "
+        uv run alembic -c alembic/alembic.ini upgrade head &&
+        uv run uvicorn src.app:app --host 0.0.0.0 --port 8000 --reload
+      "
