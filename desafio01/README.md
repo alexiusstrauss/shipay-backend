@@ -1,4 +1,4 @@
-# 🎯 fastapi-boilerplate
+# 🎯 Shipay-desafio
 
 ## 📋 Sumário
 
