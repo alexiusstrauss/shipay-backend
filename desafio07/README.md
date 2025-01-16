@@ -1,7 +1,10 @@
 ## Ítem 7: Padrões de Projeto para Normalização de Serviços de Terceiros
 
-> Qual ou quais Padrões de Projeto/Design Patterns você utilizaria para from abc import ABC, abstractmethod
+> Qual ou quais Padrões de Projeto/Design Patterns você utilizaria para normalizar serviços de terceiros (tornar múltiplas interfaces de diferentes fornecedores uniforme), por exemplo serviços de disparos de e-mails, ou então disparos de SMS
 
+``` python
+
+from abc import ABC, abstractmethod
 # Interface de Comunicação
 class CommunicationStrategy(ABC):
     @abstractmethod
@@ -56,6 +59,7 @@ if __name__ == "__main__":
 
     service.set_strategy(slack_strategy)
     service.send("Olá, esta é uma mensagem no Slack!")normalizar serviços de terceiros (tornar múltiplas interfaces de diferentes fornecedores uniforme), por exemplo serviços de disparos de e-mails, ou então disparos de SMS.
+```
 
 # Benefício do Padrão Strategy para Normalização de Serviços de Terceiros
 
