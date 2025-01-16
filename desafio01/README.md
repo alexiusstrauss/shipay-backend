@@ -134,7 +134,10 @@ Você poderá encontrar mais instruções sobre o uv na sua [documentação ofic
     make migrate
     make run-dev
 ```
-
+### Acesse a documentação da API
+```
+    http://localhost:8000/docs
+```
 
 
 Com a lib `uv` instalada, execute o comando para criar o ambiente virtual na raiz do seu projeto:
