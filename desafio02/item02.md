@@ -43,8 +43,6 @@ sequenceDiagram
 
 Essa solução aproveita a robustez e escalabilidade do Kafka, combinada com a velocidade e resiliência do Redis, garantindo alta performance e confiabilidade no processamento e armazenamento dos eventos.
 
-
-
 ---
 
 # Por que usar Kafka em vez de RabbitMQ?
