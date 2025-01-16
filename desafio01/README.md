@@ -39,9 +39,9 @@ Além de outros, o principal pattern que guia este projeto é o Hexagonal (+ Cle
 fornece uma maneira de organizar o código de forma que a lógica de negócio seja encapsulada, mas separada do mecanismo de
 entrega. Isso permite uma melhor manutenção e menos dependências.
 
-A estrutura do código segue uma organização de pacote por domínio, ou seja, vamos supor que veículo seja um domínio
-mapeado na nossa estrutura de domínios, nesse caso, teremos na pasta `src.packages` a parte `customer_validation` que conterá todo o
-código necessário para o tratamento de validacao de clientes via cnpj e cep com baixo acoplamento e contexto bem delimitado.
+A estrutura do código segue uma organização de pacote por domínio, ou seja, vamos supor que customer_validation seja um domínio
+mapeado na nossa estrutura de domínios, nesse caso, teremos na pasta `src.packages` a pasta `customer_validation` que conterá todo o
+código necessário para o tratamento de validacao de `clientes via cnpj e cep` com baixo acoplamento e contexto bem delimitado.
 
 ## 🗂 Estrutura de pastas
 
@@ -106,10 +106,7 @@ make coverage-html
 ## ▶️ Executando o projeto
 
 ### Opção 1 - Via Docker Compose
-Se você deseja executar o projeto através do docker-compose, este projeto utiliza a imagem python da Altsystems
-na versão 3.12 que fica armazenada no Azure ACR. Você terá que ter um usuário Azure configurado com as permissões adequadas
-para poder baixar essa dependência.
-
+Se você deseja executar o projeto através do docker-compose, este projeto utiliza esta dockernizado e possui um Makefile com comandos úteis.
 
 #### Execute o docker-compose com ajuda do Makefile no alias
 
