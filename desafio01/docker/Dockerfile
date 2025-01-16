@@ -1,7 +1,5 @@
-# Use a imagem base do Python 3.12
 FROM python:3.12-slim
 
-# Atualize os pacotes do sistema e instale dependências de segurança
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libssl-dev \
