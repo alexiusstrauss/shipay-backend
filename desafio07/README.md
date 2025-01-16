@@ -75,7 +75,6 @@ if __name__ == "__main__":
 ### Simplicidade na Manutenção e Leitura
 1. Adição de Novos Serviços: Para incluir um novo serviço, basta criar uma classe que implemente a interface CommunicationStrategy.
 2. Teste Modular: Cada estratégia pode ser testada de forma isolada, o que facilita a manutenção e a detecção de problemas.
-3. 
 3. Facilidade de Leitura: O código é intuitivo, separando responsabilidades de forma clara e organizada.
 
 Com o padrão Strategy, é possível criar soluções robustas, escaláveis e fáceis de manter, promovendo boas práticas de engenharia de software.
