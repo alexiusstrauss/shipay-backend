@@ -2,64 +2,6 @@
 
 > Qual ou quais Padrões de Projeto/Design Patterns você utilizaria para normalizar serviços de terceiros (tornar múltiplas interfaces de diferentes fornecedores uniforme), por exemplo serviços de disparos de e-mails, ou então disparos de SMS
 
-``` python
-
-from abc import ABC, abstractmethod
-# Interface de Comunicação
-class CommunicationStrategy(ABC):
-    @abstractmethod
-    def send_message(self, message: str):
-        pass
-
-# Estratégia de envio por SMS
-class SMSCommunication(CommunicationStrategy):
-    def send_message(self, message: str):
-        print(f"Enviando SMS: {message}")
-
-# Estratégia de envio por E-mail
-class EmailCommunication(CommunicationStrategy):
-    def send_message(self, message: str):
-        print(f"Enviando Email: {message}")
-
-# Estratégia de envio por Slack
-class SlackCommunication(CommunicationStrategy):
-    def send_message(self, message: str):
-        print(f"Enviando mensagem no Slack: {message}")
-
-# Serviço que utiliza uma estratégia genérica
-class CommunicationService:
-    def __init__(self):
-        self.strategy = None  # Nenhuma estratégia inicial
-
-    def set_strategy(self, strategy: CommunicationStrategy):
-        """Define dinamicamente a estratégia a ser usada."""
-        self.strategy = strategy
-
-    def send(self, message: str):
-        if not self.strategy:
-            raise ValueError("Nenhuma estratégia definida. Use set_strategy primeiro.")
-        self.strategy.send_message(message)
-
-# Exemplo de uso
-if __name__ == "__main__":
-    # Instâncias das estratégias
-    sms_strategy = SMSCommunication()
-    email_strategy = EmailCommunication()
-    slack_strategy = SlackCommunication()
-
-    # Serviço genérico
-    service = CommunicationService()
-
-    # Definindo dinamicamente a estratégia e enviando mensagens
-    service.set_strategy(sms_strategy)
-    service.send("Olá, esta é uma mensagem SMS!")
-
-    service.set_strategy(email_strategy)
-    service.send("Olá, esta é uma mensagem de e-mail!")
-
-    service.set_strategy(slack_strategy)
-    service.send("Olá, esta é uma mensagem no Slack!")normalizar serviços de terceiros (tornar múltiplas interfaces de diferentes fornecedores uniforme), por exemplo serviços de disparos de e-mails, ou então disparos de SMS.
-```
 
 # Benefício do Padrão Strategy para Normalização de Serviços de Terceiros
 
